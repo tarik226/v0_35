@@ -1,107 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <ul id="mapname"></ul>
-    <table id="tabel" border="1">
-        
-    </table>
+    <table id="tabel" border="1"></table>
 
     <!-- <input type="text" id="inputname">
     <input type="text" id="inputrole"> -->
-</body>
-<script>
+  </body>
+  <script>
     const workers = [
-  { id: 1, name: 'Alice Dupont', role: 'Manager', city: 'Paris', salary: 60000, active: true, hireDate: '2023-01-15' },
-  { id: 2, name: 'Bob Martin', role: 'Developer', city: 'Lyon', salary: 55000, active: true, hireDate: '2022-06-10' },
-  { id: 3, name: 'Claire Bernard', role: 'Designer', city: 'Paris', salary: 48000, active: false, hireDate: '2024-02-01' },
-  { id: 4, name: 'David Leroy', role: 'Developer', city: 'Lyon', salary: 52000, active: true, hireDate: '2021-08-20' },
-  { id: 5, name: 'Eve Dubois', role: 'Manager', city: 'Marseille', salary: 62000, active: true, hireDate: '2020-03-05' },
-]
+      {
+        id: 1,
+        name: "Alice Dupont",
+        role: "Manager",
+        city: "Paris",
+        salary: 60000,
+        active: true,
+        hireDate: "2023-01-15",
+      },
+      {
+        id: 2,
+        name: "Bob Martin",
+        role: "Developer",
+        city: "Lyon",
+        salary: 55000,
+        active: true,
+        hireDate: "2022-06-10",
+      },
+      {
+        id: 3,
+        name: "Claire Bernard",
+        role: "Designer",
+        city: "Paris",
+        salary: 48000,
+        active: false,
+        hireDate: "2024-02-01",
+      },
+      {
+        id: 4,
+        name: "David Leroy",
+        role: "Developer",
+        city: "Lyon",
+        salary: 52000,
+        active: true,
+        hireDate: "2021-08-20",
+      },
+      {
+        id: 5,
+        name: "Eve Dubois",
+        role: "Manager",
+        city: "Marseille",
+        salary: 62000,
+        active: true,
+        hireDate: "2020-03-05",
+      },
+    ];
 
-//11
-// workers.map((e)=> {
-//     let li=document.createElement('li');
-//     li.textContent=e.name+' '+e.salary;
-//     document.querySelector('#mapname').append(li);
+    //11
+    // workers.map((e)=> {
+    //     let li=document.createElement('li');
+    //     li.textContent=e.name+' '+e.salary;
+    //     document.querySelector('#mapname').append(li);
 
-//     })
+    //     })
 
-//12
-// let tab=workers.filter((e)=>e.salary>50000);
-// tab.map((e)=>{
-//     console.log(e.name+' '+e.role+' '+e.salary);
-// })
+    //12
+    // let tab=workers.filter((e)=>e.salary>50000);
+    // tab.map((e)=>{
+    //     console.log(e.name+' '+e.role+' '+e.salary);
+    // })
 
-//13
-// workers.map((e)=> {
-//     let li=document.createElement('li');
-//     li.textContent=e.name;
-//     li.setAttribute('data-id',e.id);
-//     li.addEventListener('click',function (e){
-//        window.alert(e.target.dataset.id);
-//     })
-//     document.querySelector('#mapname').append(li);
+    //13
+    // workers.map((e)=> {
+    //     let li=document.createElement('li');
+    //     li.textContent=e.name;
+    //     li.setAttribute('data-id',e.id);
+    //     li.addEventListener('click',function (e){
+    //        window.alert(e.target.dataset.id);
+    //     })
+    //     document.querySelector('#mapname').append(li);
 
-//      })
+    //      })
 
-//14
-// let total= workers.reduce((prev,next)=>prev+=next.salary ,0);
-// console.log(total);
+    //14
+    // let total= workers.reduce((prev,next)=>prev+=next.salary ,0);
+    // console.log(total);
 
-//15
-// console.log(workers.sort((a,b)=>a['name'].localeCompare(b['name'])));
+    //15
+    // console.log(workers.sort((a,b)=>a['name'].localeCompare(b['name'])));
 
-//16
-// console.log(Object.keys(workers.find((e)=>e.id==1)));
- 
-//17
-// let table = document.querySelector('#tabel');
-//  workers.forEach(worker => {
-//   let tr = document.createElement('tr');
-//   // Loop through each property of the worker object
-//   Object.entries(worker).forEach(([key, val]) => {
-//     let td = document.createElement('td');
-//     td.textContent = val; // show the value
-//     tr.append(td);
-//   });
-//   table.append(tr);
-// });
+    //16
+    // console.log(Object.keys(workers.find((e)=>e.id==1)));
 
-//18
-// let inputname=document.getElementById('inputname');
-// let inputrole=document.getElementById('inputrole');
-// inputrole.addEventListener('blur',function (){
-//     workers.push({name:inputname.value,role:inputrole.value,city:'none',salary:3456,acitve:true ,hireDate:'2021-5-12'})
-// })
-// console.log(workers);
+    //17
+    // let table = document.querySelector('#tabel');
+    //  workers.forEach(worker => {
+    //   let tr = document.createElement('tr');
+    //   // Loop through each property of the worker object
+    //   Object.entries(worker).forEach(([key, val]) => {
+    //     let td = document.createElement('td');
+    //     td.textContent = val; // show the value
+    //     tr.append(td);
+    //   });
+    //   table.append(tr);
+    // });
 
-//19
-// let imutate=[...workers];
-// console.log(imutate);
-// console.log(imutate==workers);
+    //18
+    // let inputname=document.getElementById('inputname');
+    // let inputrole=document.getElementById('inputrole');
+    // inputrole.addEventListener('blur',function (){
+    //     workers.push({name:inputname.value,role:inputrole.value,city:'none',salary:3456,acitve:true ,hireDate:'2021-5-12'})
+    // })
+    // console.log(workers);
 
-//21
-// console.log(workers);
+    //19
+    // let imutate=[...workers];
+    // console.log(imutate);
+    // console.log(imutate==workers);
 
-// workers.forEach((e)=>{
-//     e.salary+=e.salary*0.1
-// })
+    //21
+    // console.log(workers);
 
-// console.log(workers);
+    // workers.forEach((e)=>{
+    //     e.salary+=e.salary*0.1
+    // })
 
-//22
+    // console.log(workers);
 
+    //22
+     var paris=[];var lyon=[]; var marseille=[];
+    workers.forEach((e) => {
+      switch (e.city) {
+        case "Paris":
+           paris.push(e.name);
+          break;
+        case "Lyon":
+            lyon.push(e.name);
+          break;
+        case "Marseille":
+            marseille.push(e.name);
+          break;
+        default:
+            console.log('none');
+            
+          break;
+      }
+      
+    }
+      );
+    console.log(paris);
+      console.log(lyon);
+      console.log(marseille);
 
-
-
-//23
-let response =workers.some((e)=> e.active==true);
-console.log(response);
-
-</script>
+    //23
+    // let response =workers.some((e)=> e.active==true);
+    // console.log(response);
+  </script>
 </html>
