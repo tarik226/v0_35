@@ -11,6 +11,16 @@
 
     <!-- <input type="text" id="inputname">
     <input type="text" id="inputrole"> -->
+    <!-- <select  id="option">
+        <option value="Manager">Manager</option>
+        <option value="Designer">Designer</option>
+        <option value="Developer">Developer</option>
+    </select> -->
+
+    <table id="tablee" border="1">
+        <tr><th>id</th><th>name</th><th>role</th><th>city</th><th>salary</th></tr>
+
+    </table>
   </body>
   <script>
     const workers = [
@@ -172,17 +182,50 @@
     // console.log(workers==deepclone);
     
     //26
-    let inputname=document.getElementById('inputname');
-    let inputrole=document.getElementById('inputrole');
-    inputname.addEventListener('blur',function (e){
-        let result=workers.filter((elem)=>elem.name==e.target.value);
-        console.log(result);
+    // let inputname=document.getElementById('inputname');
+    // let inputrole=document.getElementById('inputrole');
+    // inputname.addEventListener('blur',function (e){
+    //     let result=workers.filter((elem)=>elem.name==e.target.value);
+    //     console.log(result);
         
-    })
-    inputrole.addEventListener('blur',function (e){
-        let result=workers.filter((elem)=>elem.role==e.target.value);
-        console.log(result);
+    // })
+    // inputrole.addEventListener('blur',function (e){
+    //     let result=workers.filter((elem)=>elem.role==e.target.value);
+    //     console.log(result);
         
-    })
+    // })
+
+    //27 ne fonctionne pas
+    // let option=document.getElementById('option').value;
+    // console.log(option);
+    // let result=workers.filter((e)=>{
+    //     console.log('inside the filter');
+        
+    //     e.role===option;
+    // })
+    // console.log(result);
+    
+
+    //28
+    //   let table=document.getElementById('tablee');
+    //   workers.forEach((e)=>{
+    //     let tr=document.createElement('tr');
+    //     let tdid=document.createElement('td');
+    //     tdid.textContent=e.id;
+    //     tr.append(tdid);
+    //     let tdname=document.createElement('td');
+    //     tdname.textContent=e.name;
+    //     tr.append(tdname);
+    //     let tdrole=document.createElement('td');
+    //     tdrole.textContent=e.role;
+    //     tr.append(tdrole);
+    //     let tdcity=document.createElement('td');
+    //     tdcity.textContent=e.city;
+    //     tr.append(tdcity);
+    //     let tdsalary=document.createElement('td');
+    //     tdsalary.textContent=e.salary;
+    //     tr.append(tdsalary);
+    //     table.append(tr);
+    //   })
   </script>
 </html>
