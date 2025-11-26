@@ -171,6 +171,18 @@
     
     // console.log(workers==deepclone);
     
-    
+    //26
+    let inputname=document.getElementById('inputname');
+    let inputrole=document.getElementById('inputrole');
+    inputname.addEventListener('blur',function (e){
+        let result=workers.filter((elem)=>elem.name==e.target.value);
+        console.log(result);
+        
+    })
+    inputrole.addEventListener('blur',function (e){
+        let result=workers.filter((elem)=>elem.role==e.target.value);
+        console.log(result);
+        
+    })
   </script>
 </html>
