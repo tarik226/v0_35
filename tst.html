@@ -17,10 +17,34 @@
         <option value="Developer">Developer</option>
     </select> -->
 
-    <!-- <table id="tablee" border="1">
-        <tr><th>id</th><th>name</th><th>role</th><th>city</th><th>salary</th></tr>
-
-    </table> -->
+    <table id="tablee" border="1">
+      <tr>
+        <th>
+          <select id="optionname">
+            <option value="Alice Dupont">Alice Dupont</option>
+            <option value="Bob Martin">Bob Martin</option>
+            <option value="Claire Bernard">Claire Bernard</option>
+            <option value="David Leroy">David Leroy</option>
+            <option value="Eve Dubois">Eve Dubois</option>
+          </select>
+        </th>
+        
+        <th>
+            <select id="optionrole">
+            <option value="Manager">Manager</option>
+            <option value="Designer">Designer</option>
+            <option value="Developer">Developer</option>
+          </select>
+        </th>
+        
+        <th>
+            <select id="optionsort">
+                <option value="a-z">higher to lower</option>
+                <option value="z-a">lower to higher</option>
+            </select>
+        </th>
+      </tr>
+    </table>
   </body>
   <script>
     const workers = [
@@ -157,10 +181,10 @@
     //       break;
     //     default:
     //         console.log('none');
-            
+
     //       break;
     //   }
-      
+
     // }
     //   );
     // console.log(paris);
@@ -178,21 +202,21 @@
     //25
     // let deepclone=structuredClone(workers);
     // console.log(deepclone);
-    
+
     // console.log(workers==deepclone);
-    
+
     //26
     // let inputname=document.getElementById('inputname');
     // let inputrole=document.getElementById('inputrole');
     // inputname.addEventListener('blur',function (e){
     //     let result=workers.filter((elem)=>elem.name==e.target.value);
     //     console.log(result);
-        
+
     // })
     // inputrole.addEventListener('blur',function (e){
     //     let result=workers.filter((elem)=>elem.role==e.target.value);
     //     console.log(result);
-        
+
     // })
 
     //27 ne fonctionne pas
@@ -200,11 +224,10 @@
     // console.log(option);
     // let result=workers.filter((e)=>{
     //     console.log('inside the filter');
-        
+
     //     e.role===option;
     // })
     // console.log(result);
-    
 
     //28
     //   let table=document.getElementById('tablee');
@@ -227,8 +250,12 @@
     //     tr.append(tdsalary);
     //     table.append(tr);
     //   })
-    
+
     //29
+    let name=document.getElementById('optionname');
+      let role=document.getElementById('optionrole');
+      let salary=document.getElementById('optionsort');
+
 
 
 
@@ -238,6 +265,9 @@
     // console.log(temptable);
     // console.log(workers);
     // console.log(finaltable);
-    
+
+    //31
+    localStorage.setItem('itemunique','idworker');
+
   </script>
 </html>
