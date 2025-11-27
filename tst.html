@@ -267,10 +267,10 @@
     // console.log(finaltable);
 
     //31
-    localStorage.setItem('itemunique','idworker');
+    // localStorage.setItem('itemunique','idworker');
 
     //32
-    localStorage.getItem('itemunique');
+    // localStorage.getItem('itemunique');
 
     //33 incomprehensible
     //34
@@ -282,7 +282,25 @@
     //   console.log(city);
     //   console.log(salary);
       
-      
+    //35
+    // Object.freeze(workers);
+    // workers.push({id: 30,
+    //     name: "Bob Marly",
+    //     role: "Manager",
+    //     city: "Paris",
+    //     salary: 543234,
+    //     active: true,
+    //     hireDate: "2022-06-10",}) ;
+        //an error ocurred
+
+    //36
+    let temptablee=[];
+    workers.forEach((e)=>{
+        temptablee.push(e.city)
+    })
+    let temptable=[...new Set(temptablee)]
+    console.log(temptable);
+    
       
   </script>
 </html>
