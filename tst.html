@@ -317,32 +317,38 @@
     // })
 
     //38
-    let error=document.getElementById('errors');
-    document.getElementById('formhandle').addEventListener('submit',(e)=>{
-            let inputname=document.getElementById('inputname').value;
-    let inputrole=document.getElementById('inputrole').value;
-    let inputsalary=document.getElementById('inputsalary').value;
+    // let error=document.getElementById('errors');
+    // document.getElementById('formhandle').addEventListener('submit',(e)=>{
+    //         let inputname=document.getElementById('inputname').value;
+    // let inputrole=document.getElementById('inputrole').value;
+    // let inputsalary=document.getElementById('inputsalary').value;
 
-        e.preventDefault();
-        let regexname=/^[A-Za-z]+(\s[A-Za-z]+)*$/;
-        let regexrole=/^(Developer|Designer|Manager)$/;
-        let regexsalary=/^\d{2,}\.\d{1,3}$/;
-        if (regexname.test(inputname)&&regexrole.test(inputrole)&&regexsalary.test(inputsalary)) {
-            window.alert('employe ajoute');
-            let obj={id:10,name:inputname,role:inputrole,city:'none',salary:inputsalary,active:false,hireDate:'2012-06-05'};
-            workers.push(obj);
-            console.log(workers);            
-        } else {
-            if (!regexname.test(inputname)) {
-                error.textContent+='nom invalide';
-            }
-            if (!regexrole.test(inputrole)) {
-                error.textContent+='role invalide';
-            }
-            if (!regexsalary.test(inputsalary)) {
-                error.textContent+='salary invalide';
-            }
-        }
-    })
+    //     e.preventDefault();
+    //     let regexname=/^[A-Za-z]+(\s[A-Za-z]+)*$/;
+    //     let regexrole=/^(Developer|Designer|Manager)$/;
+    //     let regexsalary=/^\d{2,}\.\d{1,3}$/;
+    //     if (regexname.test(inputname)&&regexrole.test(inputrole)&&regexsalary.test(inputsalary)) {
+    //         window.alert('employe ajoute');
+    //         let obj={id:10,name:inputname,role:inputrole,city:'none',salary:inputsalary,active:false,hireDate:'2012-06-05'};
+    //         workers.push(obj);
+    //         console.log(workers);            
+    //     } else {
+    //         if (!regexname.test(inputname)) {
+    //             error.textContent+='nom invalide';
+    //         }
+    //         if (!regexrole.test(inputrole)) {
+    //             error.textContent+='role invalide';
+    //         }
+    //         if (!regexsalary.test(inputsalary)) {
+    //             error.textContent+='salary invalide';
+    //         }
+    //     }
+    // })
+      
+    //39
+    // console.log(workers);    
+    // let newtable=workers.toSpliced(2,1);
+    // console.log(workers);
+    // console.log(newtable);
   </script>
 </html>
