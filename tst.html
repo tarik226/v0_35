@@ -350,5 +350,10 @@
     // let newtable=workers.toSpliced(2,1);
     // console.log(workers);
     // console.log(newtable);
+
+    //40
+    let newrr = workers.filter((e)=>e.role=='Manager').map((e)=>({ name: e.name, salary: e.salary,role:e.role })).sort((a,b)=>a.name.localeCompare(b.name));
+    console.log(newrr);
+    
   </script>
 </html>
