@@ -294,13 +294,19 @@
         //an error ocurred
 
     //36
-    let temptablee=[];
-    workers.forEach((e)=>{
-        temptablee.push(e.city)
-    })
-    let temptable=[...new Set(temptablee)]
-    console.log(temptable);
+    // let temptablee=[];
+    // workers.forEach((e)=>{
+    //     temptablee.push(e.city)
+    // })
+    // let temptable=[...new Set(temptablee)]
+    // console.log(temptable);
     
-      
+    //37
+    workers.forEach((e)=>{
+        console.log(typeof e.hireDate);
+        if(new Date('2024-01-01')<new Date(e.hireDate)){
+            console.log(e.name+' '+e.hireDate);
+        }
+    })
   </script>
 </html>
